@@ -1,7 +1,7 @@
 [project]
 name = "ticktick-mcp"
 version = "2.0.0"
-description = "Production-ready MCP server for TickTick - comprehensive task management, habit tracking, focus timer, and productivity analytics"
+description = "Production-ready MCP server for TickTick with 80+ tools - comprehensive task management, habit tracking, focus timer, smart scheduling, and productivity analytics"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
@@ -19,9 +19,13 @@ keywords = [
     "habits",
     "focus",
     "time-management",
+    "gtd",
+    "todo",
+    "task-management",
+    "model-context-protocol",
 ]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "Intended Audience :: End Users/Desktop",
     "License :: OSI Approved :: MIT License",
@@ -41,6 +45,7 @@ dependencies = [
     "httpx>=0.25.0",
     "pydantic>=2.0.0",
     "websockets>=12.0",
+    "tenacity>=8.0.0",
 ]
 
 [project.optional-dependencies]
@@ -53,15 +58,22 @@ dev = [
     "mypy>=1.0.0",
     "pre-commit>=3.0.0",
 ]
+docs = [
+    "mkdocs>=1.5.0",
+    "mkdocs-material>=9.0.0",
+    "mkdocstrings[python]>=0.24.0",
+]
 
 [project.scripts]
-ticktick-mcp = "ticktick_mcp.server:main"
+ticktick-mcp = "ticktick_mcp.cli:main"
+ticktick-auth = "ticktick_mcp.cli:auth_command"
 
 [project.urls]
-Homepage = "https://github.com/yourusername/ticktick-mcp"
-Documentation = "https://github.com/yourusername/ticktick-mcp#readme"
-Repository = "https://github.com/yourusername/ticktick-mcp"
-Issues = "https://github.com/yourusername/ticktick-mcp/issues"
+Homepage = "https://github.com/MostafaSuliman/TickTick-MCP"
+Documentation = "https://github.com/MostafaSuliman/TickTick-MCP#readme"
+Repository = "https://github.com/MostafaSuliman/TickTick-MCP"
+Issues = "https://github.com/MostafaSuliman/TickTick-MCP/issues"
+Changelog = "https://github.com/MostafaSuliman/TickTick-MCP/blob/main/CHANGELOG.md"
 
 [build-system]
 requires = ["hatchling"]

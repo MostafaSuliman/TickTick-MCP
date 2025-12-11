@@ -9,6 +9,9 @@ from .habit_service import HabitService
 from .focus_service import FocusService
 from .statistics_service import StatisticsService
 from .auth_service import AuthService
+from .smart_service import SmartService
+from .user_service import UserService
+from .calendar_service import CalendarService
 
 __all__ = [
     "TaskService",
@@ -18,4 +21,7 @@ __all__ = [
     "FocusService",
     "StatisticsService",
     "AuthService",
+    "SmartService",
+    "UserService",
+    "CalendarService",
 ]
