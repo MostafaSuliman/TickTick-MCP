@@ -1,4 +1,12 @@
+<div align="center">
+
+[![TickTick](https://ticktick.com/favicon.ico)](https://ticktick.com)
+
 # TickTick MCP Server 🎯
+
+**[TickTick.com](https://ticktick.com)** | Manage Your Tasks with AI
+
+</div>
 
 A comprehensive MCP (Model Context Protocol) server for managing your TickTick tasks directly from Claude or any MCP-compatible AI assistant.
 
